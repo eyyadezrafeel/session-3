@@ -1,72 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        #img-frame {
-            overflow: hidden;
-            height: 100px;
-            width: 100px;
-        }
-        
-        #img-frame img {
-            width: 100%;
-        }
-        
-        body {
-            display: flex;
-            flex-direction: row;
-        }
-        body > div {
-            width: 50%;
-        }
-        
-        body > div:first-child{
-            background: rgb(39, 226, 255);
-        }
-    </style>
-    <title>eyyad ezrafeel</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eyyad ezrafeel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+
+    body > div {
+      width: 50%;
+      padding: 40px;
+    }
+
+    body > div:first-child {
+      background: rgb(39, 226, 255);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body > div:last-child {
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color: #555;
+    }
+
+    .form-container {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    #img-frame {
+      overflow: hidden;
+      height: 100px;
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    #img-frame img {
+      width: 100%;
+      display: block;
+    }
+
+    form h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: white;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+
+    form button {
+      width: 100%;
+      padding: 12px;
+      background: white;
+      color: rgb(39, 226, 255);
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #e0faff;
+    }
+
+    p {
+      margin-top: 15px;
+      color: white;
+    }
+
+    p a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div>
-        <!-- blue half -->
-        <div>
-            <!-- to control horizontal position within parent -->
-            <div id="img-frame">
-                <img src="351602.png" alt="">
-            </div>
-            <form action="">
-                <h1>Create a free account now</h1>
-                <div>
-                    <input type="text" name="fullname" id="fullname" required placeholder="Enter your full name">
-                    <!-- <p>Error: </p> -->
-                </div>
-                <div>
-                    <input type="email" name="email" id="email" required placeholder="Enter your email">
-                </div>
-                <div>
-                    <input type="password" name="password" id="password" required placeholder="Enter your password">
-                </div>
-            </form>
-            <button>
-                CREATE ACCOUNT
-            </button>
-            <p>
-                Already have an account?
-                <a href="/login">Log In</a>
-            </p>
-        </div>
+  <div>
+    
+    <div class="form-container">
+      <div id="img-frame">
+        <img src="351602.png" alt="Logo" />
+      </div>
+      <form action="">
+        <h1>Create a free account now</h1>
+        <input type="text" name="fullname" id="fullname" required placeholder="Enter your full name" />
+        <input type="email" name="email" id="email" required placeholder="Enter your email" />
+        <input type="password" name="password" id="password" required placeholder="Enter your password" />
+        <button type="submit">CREATE ACCOUNT</button>
+        <p>
+          Already have an account?
+          <a href="/login">Log In</a>
+        </p>
+      </form>
     </div>
-    <div>
-        <!-- white half -->
-        white half
-    </div>
+  </div>
+  <div>
+
+    Welcome to our platform!
+  </div>
 </body>
 </html>
+
